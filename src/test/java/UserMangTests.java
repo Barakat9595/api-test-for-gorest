@@ -48,6 +48,7 @@ public class UserMangTests extends Authentication {
     @Test(priority = 2, dependsOnMethods = {"createNewUser"})
     public void showResults()
     {
+
            Response response =
                    given()
                         .header("Authorization", "Bearer " + token)  //the auth to show my data not the default data
