@@ -36,6 +36,9 @@ public class SerializationAndDeSerialization extends Authentication{
 
 
             response.then().statusCode(201).log().all();
+        JSONObject obj = new JSONObject(response.getBody().asString());
+        userId = obj.get("id").toString();
+        // userId = obj.getJSONObject("id").getString("") --> is used only when the key contains a nested JSON object.
 
 
 
